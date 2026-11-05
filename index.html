@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto | Dai Couto Cosméticos</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h1>Dai Couto</h1>
+                <span>♡</span>
+                <p>C O S M É T I C O S</p>
+            </div>
+
+            <nav>
+                <a href="#"><i class="fa-solid fa-house"></i> Início</a>
+                <a href="#" class="active"><i class="fa-solid fa-cube"></i> Produtos</a>
+                <a href="#"><i class="fa-solid fa-right-left"></i> Movimentações</a>
+                <a href="#"><i class="fa-solid fa-triangle-exclamation"></i> Estoque baixo</a>
+                <a href="#"><i class="fa-solid fa-chart-column"></i> Relatórios</a>
+                <a href="#"><i class="fa-solid fa-gear"></i> Configurações</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Beleza também é<br>autocuidado ♡</p>
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar no sistema...">
+                </div>
+
+                <div class="user">
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-solid fa-circle-user"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+            </header>
+
+            <section class="page-header">
+
+                <div>
+                    <h2>
+                        <i class="fa-solid fa-cube"></i>
+                        Cadastro de produto
+                    </h2>
+
+                    <p>Preencha as informações do produto para incluí-lo no seu estoque.</p>
+                </div>
+
+                <div class="date">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span id="dataAtual"></span>
+                </div>
+
+            </section>
+
+            <section class="content-card">
+
+                <div class="form-area">
+
+                    <form id="formProduto">
+
+                        <div class="form-group">
+                            <label for="nome">Nome do produto <span>*</span></label>
+                            <input type="text" id="nome" placeholder="Ex.: Shampoo Elseve" required>
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="marca">Marca <span>*</span></label>
+
+                                <select id="marca" required>
+                                    <option value="">Selecione a marca</option>
+                                    <option value="Elseve">Elseve</option>
+                                    <option value="Nivea">Nivea</option>
+                                    <option value="O Boticário">O Boticário</option>
+                                    <option value="Natura">Natura</option>
+                                    <option value="Outra">Outra</option>
+                                </select>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="categoria">Categoria <span>*</span></label>
+
+                                <select id="categoria" required>
+                                    <option value="">Selecione a categoria</option>
+                                    <option value="Cabelo">Cabelo</option>
+                                    <option value="Corpo">Corpo</option>
+                                    <option value="Pele">Pele</option>
+                                    <option value="Maquiagem">Maquiagem</option>
+                                    <option value="Cuidados pessoais">Cuidados pessoais</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="fragrancia">Fragrância <span>*</span></label>
+
+                                <select id="fragrancia" required>
+                                    <option value="">Selecione a fragrância</option>
+                                    <option value="Floral">Floral</option>
+                                    <option value="Doce">Doce</option>
+                                    <option value="Frutal">Frutal</option>
+                                    <option value="Suave">Suave</option>
+                                    <option value="Sem fragrância">Sem fragrância</option>
+                                    <option value="Não se aplica">Não se aplica</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tamanho">Tamanho <span>*</span></label>
+
+                                <select id="tamanho" required>
+                                    <option value="">Selecione o tamanho</option>
+                                    <option value="30ml">30 ml</option>
+                                    <option value="50ml">50 ml</option>
+                                    <option value="100ml">100 ml</option>
+                                    <option value="200ml">200 ml</option>
+                                    <option value="300ml">300 ml</option>
+                                    <option value="500ml">500 ml</option>
+                                    <option value="1L">1 litro</option>
+                                    <option value="Único">Tamanho único</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="quantidade">Quantidade inicial <span>*</span></label>
+
+                            <div class="quantity-input">
+                                <input type="number" id="quantidade" min="0" placeholder="Ex.: 10" required>
+                                <span>unidades</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="imagem">Imagem do produto</label>
+
+                            <label for="imagem" class="upload-area">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <strong>Clique para fazer o upload</strong>
+                                <span>ou arraste a imagem para cá</span>
+                                <small>Formatos aceitos: JPG, PNG | Tamanho máximo: 5MB</small>
+                            </label>
+
+                            <input type="file" id="imagem" accept="image/png, image/jpeg" hidden>
+
+                            <div id="preview-container">
+                                <img id="preview" alt="Prévia do produto">
+                                <button type="button" id="removerImagem">Remover imagem</button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-save">
+                            <i class="fa-regular fa-floppy-disk"></i>
+                            Salvar produto
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <div class="product-preview">
+
+                    <div class="preview-decoration">
+                        <i class="fa-solid fa-spa"></i>
+                    </div>
+
+                    <div class="preview-text">
+                        <h3>Dai Couto</h3>
+                        <p>Produtos de qualidade,<br>para realçar o que<br>te faz única!</p>
+                        <span>♡</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
